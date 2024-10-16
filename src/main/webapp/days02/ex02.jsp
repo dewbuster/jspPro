@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +26,17 @@
 </header>
 <div>
   <xmp class="code">
-    index.html
+    프로젝트시 image 상대경로 절대경로 통일
+    절대경로 :  /jspPro/days02/ex01_02.jsp 통일
+    			jspPro를 찾아오면 webapp/까지 진입
   </xmp>
+  
+  <%
+  	String contextPath = request.getContextPath();
+  %>
+  context path = <%=contextPath %>
+  <br>
+  <img alt="" src="<%=contextPath %>/images/mac.jpg" width = 200>
 </div>
 </body>
 </html>

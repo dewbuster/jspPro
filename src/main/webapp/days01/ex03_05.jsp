@@ -31,7 +31,8 @@
 <div>
   <xmp class="code">
   </xmp>
-  정수 : <input type="text" id="num" name="num" value="<%=num %>" autofocus><br>
+  <%-- 정수 : <input type="text" id="num" name="num" value="<%=num %>" autofocus><br> --%>
+  정수 : <input type="text" id="num" name="num" autofocus><br>
   <p id="demo">
 			<%
 			if (num != 0){
@@ -45,10 +46,10 @@
   </p>
 </div>
 <script>
-	if(<%=num%> == 0) $("#num").val("");
-	$("#num").select();
     $("#num")
       .css("text-align","center")
+      <%-- .val('<%=num%>') --%>
+      .val('${param.num}')
       .on({
          "keydown":function (e){
             if ( !(e.which >= 48 && e.which <= 57
@@ -69,7 +70,8 @@
 
            } // if
          }
-      });
+      })
+      .select();
   </script>
 </body>
 </html>
