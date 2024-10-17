@@ -9,8 +9,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- 
-  <servlet>
+   
+  <!-- <servlet>
   	<description>첫 번째 서블릿</description>
   	<description>현재 날짜, 시간, 정보 응답</description>
   	<servlet-name>now</servlet-name>
@@ -21,5 +21,5 @@
   	<url-pattern>*.htm</url-pattern>
   	<url-pattern>/days02/now.do</url-pattern>
   	<url-pattern>/test/*</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 </web-app>
